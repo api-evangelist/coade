@@ -1,4 +1,16 @@
 aid: coade
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/coade.png
 name: Coade
 description: Coade is a company surfaced as a portfolio company of insight-partners and added to the API
   Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
@@ -9,9 +21,30 @@ x-backed-by:
 - insight-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-enrichment:
+  last_run: '2026-07-18'
+  method: searched
+  result: no-api-surface
+  notes: >-
+    Enrichment pipeline ran and found no enrichable API/developer surface. The only
+    public entity matching "Coade" / "Coade Holdings" (per the Insight Partners portfolio
+    source) is the historical COADE, Inc. — a Houston mechanical/plant-engineering software
+    firm (CAESAR II pipe stress analysis, PV Elite) founded 1984 and acquired by Intergraph
+    in 2010, now folded into Hexagon (spun into Octave, 2026). No independent Coade website
+    resolves (coade.ai, coade.co, coade.com all unreachable), and no developer portal,
+    documentation, OpenAPI, packages, or /.well-known surface was found.
+  probed:
+    - {url: 'https://coade.ai', status: dns-nxdomain}
+    - {url: 'https://coade.co', status: dns-nxdomain}
+    - {url: 'https://coade.com', status: connection-refused}
+    - {url: 'https://www.insightpartners.com/portfolio/coade/', status: 200, note: 'title "Coade Holdings", no detail/website'}
+  sources:
+    - https://www.insightpartners.com/portfolio/coade/
+    - https://pitchbook.com/profiles/company/10359-46
+    - https://www.crunchbase.com/organization/coade
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 apis: []
